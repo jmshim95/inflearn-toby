@@ -19,6 +19,7 @@ public class InflearnTobyApplication {
     public static void main(String[] args) {
         GenericApplicationContext applicationContext = new GenericApplicationContext();
         applicationContext.registerBean(HelloController.class);
+        applicationContext.registerBean(SimpleHelloService.class);
         applicationContext.refresh(); // -> applicationContext 초기화
 
         TomcatServletWebServerFactory serverFactory = new TomcatServletWebServerFactory();
